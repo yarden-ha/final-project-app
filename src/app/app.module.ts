@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { ButtonModule } from 'primeng/button';
 
 import { ParameterComponent } from './components/parameter/parameter.component';
 import { ChoicesComponent } from './components/choices/choices.component';
-import { ThemeService } from './components/theme.service';
+
 
 @NgModule({
   declarations: [
@@ -18,9 +18,10 @@ import { ThemeService } from './components/theme.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ButtonModule
   ],
-  providers: [ThemeService],
+  providers: [],
   
   bootstrap: [AppComponent]
 })
