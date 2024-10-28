@@ -95,7 +95,13 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              {
+                "input": "src/theme-bootstrap4-light-purple.scss",
+                "bundleName": "boot4-light-purple",
+                "inject": false
+
+              }
             ],
             "scripts": []
           }

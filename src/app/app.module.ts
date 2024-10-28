@@ -6,18 +6,22 @@ import { AppComponent } from './app.component';
 
 
 import { ParameterComponent } from './components/parameter/parameter.component';
+import { ChoicesComponent } from './components/choices/choices.component';
+import { ThemeService } from './components/theme.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParameterComponent
+    ParameterComponent,
+    ChoicesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ThemeService],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
