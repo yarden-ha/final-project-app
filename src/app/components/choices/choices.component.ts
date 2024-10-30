@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './choices.component.css'
 })
 export class ChoicesComponent {
+  title = "Machine or Exercise Setup";
 
 }

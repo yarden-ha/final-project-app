@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 
 import { ParameterComponent } from './components/parameter/parameter.component';
 import { ChoicesComponent } from './components/choices/choices.component';
+import { StepperModule } from 'primeng/stepper';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ChoicesComponent } from './components/choices/choices.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ButtonModule
+    ButtonModule,
+    StepperModule
   ],
   providers: [],
   
