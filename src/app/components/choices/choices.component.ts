@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-choices',
@@ -8,12 +8,17 @@ import { Component } from '@angular/core';
 export class ChoicesComponent {
   title = "Machine or Exercise Setup";
 
-  showInput = false;
+  @Output() calibration = new EventEmitter<void>();
+  @Output() exercises = new EventEmitter<void>();
 
-  Calibiration() {
-    this.showInput = !this.showInput; 
+
+  onCalibrationClick() {
+    this.calibration.emit();
+  }
+
+  
+  onExercisesClick() {
+    this.exercises.emit(); 
 }
-  Exercises() {
-    this.showInput = !this.showInput; 
-}
+
 }

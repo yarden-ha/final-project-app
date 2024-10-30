@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
+import { StepperModule } from 'primeng/stepper';
 
 import { ParameterComponent } from './components/parameter/parameter.component';
 import { ChoicesComponent } from './components/choices/choices.component';
-import { StepperModule } from 'primeng/stepper';
+
 
 
 @NgModule({

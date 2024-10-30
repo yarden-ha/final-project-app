@@ -1,4 +1,4 @@
-<p-stepper [linear]="true">
+<p-stepper [(activeStep)]="active" [linear]="true" >
     
     <p-stepperPanel header="Parameters Aquisition">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
@@ -17,7 +17,10 @@
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
             <div class="flex flex-column h-12rem">
                 <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                    <app-choices style="text-align: center;"> </app-choices>
+                    <app-choices 
+                    (calibration)="active = 2" 
+                    (exercises)="active = 3"
+                    style="text-align: center;"> </app-choices>
                 </div>
             </div>
             <div class="flex pt-4 justify-content-between">
@@ -28,7 +31,7 @@
     </p-stepperPanel>
     
     <p-stepperPanel header="Calibiration Methods">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
             <div class="flex flex-column h-12rem">
                 <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
                     Content III
@@ -36,6 +39,7 @@
             </div>
             <div class="flex pt-4 justify-content-start">
                 <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
+                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
             </div>
         </ng-template>
     </p-stepperPanel>
