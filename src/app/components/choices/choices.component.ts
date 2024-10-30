@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class ChoicesComponent {
   title = "Machine or Exercise Setup";
 
+  showInput = false;
+
+  Calibiration() {
+    this.showInput = !this.showInput; 
+}
+  Exercises() {
+    this.showInput = !this.showInput; 
+}
 }
