@@ -4,14 +4,20 @@
 </div>
 
     <div style="margin-bottom: 10px;">
-            <p-button (click)="toggleInputFields()">input your parameters please</p-button>
+            <button 
+            pButton type="button"  
+            icon="pi pi-check"
+            label="input your parameters please"
+            style="font-size: larger;"
+            (click)="toggleInputFields()" >
+            </button>
         </div>
 
         
         <div *ngIf="showInput">
             <div style="margin-bottom: 10px;">
                 <input
-                
+
                     type="number"
                     [(ngModel)]="age"
                     placeholder="Enter your age in years"
