@@ -3,7 +3,7 @@
 
 </div>
 
-    <div style="margin-bottom: 10px;">
+    <div style="margin-bottom: 20px;">
             <button 
             pButton type="button"  
             icon="pi pi-check"
@@ -15,9 +15,9 @@
 
         
         <div *ngIf="showInput">
-            <div style="margin-bottom: 10px;">
+            <div style="margin-bottom: 20px;" >
                 <input
-
+                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
                     type="number"
                     [(ngModel)]="age"
                     placeholder="Enter your age in years"
@@ -27,25 +27,27 @@
                 <p *ngIf="age">You entered: {{ age }} years</p>
             </div>
 
-            <div style="margin-bottom: 10px;">
+            <div style="margin-bottom: 20px;">
                 <input
                     
                     type="number"
                     [(ngModel)]="height"
                     placeholder="Enter your height in cm"
                     min="0"
-                    
+                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
+
                 />
                 <p *ngIf="height">You entered: {{ height }} cm</p>
             </div>
 
-            <div style="margin-bottom: 10px;">
+            <div style="margin-bottom: 20px;">
                 <input
                     
                     type="number"
                     [(ngModel)]="weight"
                     placeholder="Enter your weight in kg"
                     min="0"
+                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
                     
                 />
                 <p *ngIf="weight">You entered: {{ weight }} kg</p>

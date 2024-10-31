@@ -8,6 +8,8 @@ import { StepperModule } from 'primeng/stepper';
 
 import { ParameterComponent } from './components/parameter/parameter.component';
 import { ChoicesComponent } from './components/choices/choices.component';
+import { CalibirationMethodsComponent } from './calibiration-methods/calibiration-methods.component';
+import { ExerciseProgramComponent } from './exercise-program/exercise-program.component';
 
 
 
@@ -15,7 +17,9 @@ import { ChoicesComponent } from './components/choices/choices.component';
   declarations: [
     AppComponent,
     ParameterComponent,
-    ChoicesComponent
+    ChoicesComponent,
+    CalibirationMethodsComponent,
+    ExerciseProgramComponent
   ],
   imports: [
     BrowserModule,
