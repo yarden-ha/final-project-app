@@ -1,4 +1,5 @@
-<p-stepper [(activeStep)]="active" [linear]="true" >
+<div style="padding: 0 30px;">
+<p-stepper [(activeStep)]="active" [linear]="true">
     
     <p-stepperPanel header="Parameters Aquisition">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
@@ -30,7 +31,7 @@
     </p-stepperPanel>
     
     <p-stepperPanel header="Calibiration Methods">
-        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-nextCallback="nextCallback" let-index="index">
+        <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
             <div class="flex flex-column h-12rem">
                 <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
                     Content III
@@ -38,13 +39,12 @@
             </div>
             <div class="flex pt-4 justify-content-start">
                 <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
             </div>
         </ng-template>
     </p-stepperPanel>
 
     <p-stepperPanel header="ExerciseProgram">
-        <ng-template pTemplate="content" let-index="index">
+        <ng-template pTemplate="content" let-index="index" let-nextCallback="nextCallback">
             <div class="flex flex-column h-12rem">
                 <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
                     Content IV
@@ -52,9 +52,23 @@
             </div>
             <div class="flex pt-4 justify-content-start">
                 <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 1" />
+                <p-button label="Next" icon="pi pi-arrow-right" iconPos="right" (onClick)="nextCallback.emit()" />
+            </div>
+        </ng-template>
+    </p-stepperPanel>
+
+    <p-stepperPanel header="ExerciseCustomize">
+        <ng-template pTemplate="content" let-index="index" let-prevCallback="prevCallback">
+            <div class="flex flex-column h-12rem">
+                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+                    Content IV
+                </div>
+            </div>
+            <div class="flex pt-4 justify-content-start">
+                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
             </div>
         </ng-template>
     </p-stepperPanel>
 
 </p-stepper>
-
+</div>

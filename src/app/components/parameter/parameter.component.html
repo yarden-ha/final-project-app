@@ -11,27 +11,36 @@
         <div *ngIf="showInput">
             <div style="margin-bottom: 10px;">
                 <input
+                
                     type="number"
                     [(ngModel)]="age"
                     placeholder="Enter your age in years"
+                    min="0"
+                    
                 />
                 <p *ngIf="age">You entered: {{ age }} years</p>
             </div>
 
             <div style="margin-bottom: 10px;">
                 <input
+                    
                     type="number"
                     [(ngModel)]="height"
                     placeholder="Enter your height in cm"
+                    min="0"
+                    
                 />
                 <p *ngIf="height">You entered: {{ height }} cm</p>
             </div>
 
             <div style="margin-bottom: 10px;">
                 <input
+                    
                     type="number"
                     [(ngModel)]="weight"
                     placeholder="Enter your weight in kg"
+                    min="0"
+                    
                 />
                 <p *ngIf="weight">You entered: {{ weight }} kg</p>
             </div>
