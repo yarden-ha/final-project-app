@@ -1,1 +1,26 @@
-<p>exercise-program works!</p>
+<div>
+    
+    <h1> {{ title }}</h1>
+
+</div>
+
+<div style="margin-bottom: 20px;">
+    <button 
+    pButton type="button"  
+    icon="pi pi-check"
+    label="Standart Mode"
+    style="font-size: larger;"
+    (click)="onStandartClick()" >
+    </button>
+</div>
+
+
+<div style="margin-bottom: 20px;">
+    <button 
+    pButton type="button"  
+    icon="pi pi-check"
+    label="Customize Mode"
+    style="font-size: larger;"
+    (click)="onCustomizeClick()" >
+    </button>
+</div>
