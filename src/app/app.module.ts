@@ -6,10 +6,13 @@ import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { StepperModule } from 'primeng/stepper';
 
+
 import { ParameterComponent } from './components/parameter/parameter.component';
 import { ChoicesComponent } from './components/choices/choices.component';
 import { CalibirationMethodsComponent } from './calibiration-methods/calibiration-methods.component';
 import { ExerciseProgramComponent } from './exercise-program/exercise-program.component';
+import { provideHttpClient } from '@angular/common/http';
+import { HttpService } from './services/http.service';
 
 
 
@@ -28,7 +31,11 @@ import { ExerciseProgramComponent } from './exercise-program/exercise-program.co
     ButtonModule,
     StepperModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(),
+    HttpService
+    
+  ],
   
   bootstrap: [AppComponent]
 })
