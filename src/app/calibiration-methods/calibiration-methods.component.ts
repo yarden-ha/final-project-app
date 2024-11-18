@@ -24,5 +24,10 @@ export class CalibirationMethodsComponent {
 
   Intense(){
     this.showInput = !this.showInput;
+
+    this.httpService.testGet().subscribe(val => {
+      console.log("sexy mustache")
+      console.log(val)
+    });
   }
 }
