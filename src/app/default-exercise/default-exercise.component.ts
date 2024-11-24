@@ -14,6 +14,6 @@ export class DefaultExerciseComponent {
   sets: number | null = null;
   reps: number | null = null;
 
-  
+
 
 }

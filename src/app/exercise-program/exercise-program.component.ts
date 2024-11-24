@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter} from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-exercise-program',
@@ -8,11 +8,12 @@ import { Component, Output, EventEmitter} from '@angular/core';
 export class ExerciseProgramComponent {
   title= "Exercise Mode Selection";
   
-  @Output() standart = new EventEmitter<void>();
+  @Output() standard = new EventEmitter<void>();
   @Output() customize = new EventEmitter<void>();
+  
 
-  onStandartClick() {
-    this.standart.emit();
+  onStandardClick() {
+    this.standard.emit();
   }
 
   onCustomizeClick() {

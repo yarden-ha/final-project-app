@@ -22,7 +22,7 @@ export class ParameterComponent {
     if (isNaN(value)) {
       value = min;  
     } else {
-      value = Math.min(Math.max(value, min), max);  // Apply min/max range
+      value = Math.min(Math.max(value, min), max);  
     }
 
     
