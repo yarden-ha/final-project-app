@@ -13,6 +13,7 @@ import { CalibirationMethodsComponent } from './calibiration-methods/calibiratio
 import { ExerciseProgramComponent } from './exercise-program/exercise-program.component';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpService } from './services/http.service';
+import { DefaultExerciseComponent } from './default-exercise/default-exercise.component';
 
 
 
@@ -22,7 +23,8 @@ import { HttpService } from './services/http.service';
     ParameterComponent,
     ChoicesComponent,
     CalibirationMethodsComponent,
-    ExerciseProgramComponent
+    ExerciseProgramComponent,
+    DefaultExerciseComponent
   ],
   imports: [
     BrowserModule,
