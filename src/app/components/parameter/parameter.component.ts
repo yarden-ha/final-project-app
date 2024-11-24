@@ -3,22 +3,36 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-parameter',
   templateUrl: './parameter.component.html',
-  styleUrl: './parameter.component.css'
+  styleUrls: ['./parameter.component.css']
 })
 export class ParameterComponent {
-
-  title= "Parameters Aquisition";
+  title = "Parameters Acquisition";
 
   showInput = false;
 
-  
-  age: number | null = null;
-  height: number | null = null;
-  weight: number | null = null;
+  age: number = 0;
+  height: number = 0;
+  weight: number = 0;
 
   
-  toggleInputFields() {
-      this.showInput = !this.showInput; 
+  validateInput(event: any, field: 'age' | 'height' | 'weight', min: number, max: number): void {
+    let value = parseFloat(event.target.value);
+
+    
+    if (isNaN(value)) {
+      value = min;  
+    } else {
+      value = Math.min(Math.max(value, min), max);  // Apply min/max range
+    }
+
+    
+    this[field] = value;
+
+    
+    event.target.value = value;  
   }
 
+  toggleInputFields() {
+    this.showInput = !this.showInput;
+  }
 }

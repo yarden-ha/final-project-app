@@ -1,55 +1,59 @@
 <div>
-    <h1> {{ title }}</h1>
-
-</div>
-
+    <h1>{{ title }}</h1>
+  </div>
+  
+  <div style="margin-bottom: 20px;">
+    <button 
+      pButton 
+      type="button"  
+      icon="pi pi-check"
+      label="Input your parameters please"
+      style="font-size: larger;"
+      (click)="toggleInputFields()">
+    </button>
+  </div>
+  
+  <div *ngIf="showInput">
+  
     <div style="margin-bottom: 20px;">
-            <button 
-            pButton type="button"  
-            icon="pi pi-check"
-            label="input your parameters please"
-            style="font-size: larger;"
-            (click)="toggleInputFields()" >
-            </button>
-        </div>
-
-        
-        <div *ngIf="showInput">
-            <div style="margin-bottom: 20px;" >
-                <input
-                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
-                    type="number"
-                    [(ngModel)]="age"
-                    placeholder="Enter your age in years"
-                    min="0"
-                    
-                />
-                <p *ngIf="age">You entered: {{ age }} years</p>
-            </div>
-
-            <div style="margin-bottom: 20px;">
-                <input
-                    
-                    type="number"
-                    [(ngModel)]="height"
-                    placeholder="Enter your height in cm"
-                    min="0"
-                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
-
-                />
-                <p *ngIf="height">You entered: {{ height }} cm</p>
-            </div>
-
-            <div style="margin-bottom: 20px;">
-                <input
-                    
-                    type="number"
-                    [(ngModel)]="weight"
-                    placeholder="Enter your weight in kg"
-                    min="0"
-                    style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
-                    
-                />
-                <p *ngIf="weight">You entered: {{ weight }} kg</p>
-            </div>
-        </div>
+      <input
+        style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
+        type="number"
+        [value]="age"
+        placeholder="Enter your age in years"
+        min="0"
+        max="120"
+        (input)="validateInput($event, 'age', 0, 120)"
+      />
+      <p *ngIf="age !== null">You entered: {{ age }} years</p>
+    </div>
+  
+    
+    <div style="margin-bottom: 20px;">
+      <input
+        type="number"
+        [value]="height"
+        placeholder="Enter your height in cm"
+        min="0"
+        max="350"
+        style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
+        (input)="validateInput($event, 'height', 0, 350)"
+      />
+      <p *ngIf="height !== null">You entered: {{ height }} cm</p>
+    </div>
+  
+    
+    <div style="margin-bottom: 20px;">
+      <input
+        type="number"
+        [value]="weight"
+        placeholder="Enter your weight in kg"
+        min="0"
+        max="350"
+        style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
+        (input)="validateInput($event, 'weight', 0, 350)"
+      />
+      <p *ngIf="weight !== null">You entered: {{ weight }} kg</p>
+    </div>
+  </div>
+  
