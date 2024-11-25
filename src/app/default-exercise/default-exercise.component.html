@@ -1,33 +1,119 @@
 <div>
-    <h1 style="text-align: center;" > {{ title }} </h1>
+    <h1 style="text-align: center;"> {{ title }} </h1>
 
 </div>
 
 <div style="display: flex; gap: 20px; align-items: right; margin-bottom: 20px; margin-left: 540px;">
-    <div style="margin-bottom: 20px;" >
-        <input
-            style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;"
-            type="number"
-            [(ngModel)]="sets"
-            placeholder="sets"
-            min="0"
-            max="10"
-            (input)="validateInput($event, 'sets', 0, 10)"
-        />
-        <p *ngIf="sets !== null">You entered: {{ sets }} sets</p>
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;" type="number"
+            [(ngModel)]="sets" placeholder="sets" min="0" max="10" (input)="validateInput($event, 'sets', 0, 10)" />
+        <p style="
+        height: 2px;
+        padding: 2px;
+        margin: inherit;
+        " *ngIf="sets !== null">You entered: {{ sets }} sets</p>
     </div>
 
-    
-        <div style="margin-bottom: 20px;" >
-            <input
-                style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;"
-                type="number"
-                [(ngModel)]="reps"
-                placeholder="reps"
-                min="0"
-                max="30"
-                (input)="validateInput($event, 'reps', 0, 30)"
-            />
-            <p *ngIf="reps !== null">You entered: {{ reps }} reps</p>
-        </div>
+
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;" type="number"
+            [(ngModel)]="reps" placeholder="reps" min="0" max="30" (input)="validateInput($event, 'reps', 0, 30)" />
+        <p style="
+            height: 2px;
+            padding: 2px;
+            margin: inherit;
+            " *ngIf="reps !== null">You entered: {{ reps }} reps</p>
+    </div>
+</div>
+
+<div style="display: flex; gap: 20px; align-items: right; margin-bottom: 20px; margin-left: 540px;">
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;" type="number"
+            [(ngModel)]="sets" placeholder="sets" min="0" max="10" (input)="validateInput($event, 'sets', 0, 10)" />
+        <p style="
+        height: 2px;
+        padding: 2px;
+        margin: inherit;
+        " *ngIf="sets !== null">You entered: {{ sets }} sets</p>
+    </div>
+
+
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;" type="number"
+            [(ngModel)]="reps" placeholder="reps" min="0" max="30" (input)="validateInput($event, 'reps', 0, 30)" />
+        <p style="
+            height: 2px;
+            padding: 2px;
+            margin: inherit;
+            " *ngIf="reps !== null">You entered: {{ reps }} reps</p>
+    </div>
+</div>
+
+<div style="display: flex; gap: 20px; align-items: right; margin-bottom: 20px; margin-left: 540px;">
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;" type="number"
+            [(ngModel)]="sets" placeholder="sets" min="0" max="10" (input)="validateInput($event, 'sets', 0, 10)" />
+        <p style="
+        height: 2px;
+        padding: 2px;
+        margin: inherit;
+        " *ngIf="sets !== null">You entered: {{ sets }} sets</p>
+    </div>
+
+
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;" type="number"
+            [(ngModel)]="reps" placeholder="reps" min="0" max="30" (input)="validateInput($event, 'reps', 0, 30)" />
+        <p style="
+            height: 2px;
+            padding: 2px;
+            margin: inherit;
+            " *ngIf="reps !== null">You entered: {{ reps }} reps</p>
+    </div>
+</div>
+
+<div style="display: flex; gap: 20px; align-items: right; margin-bottom: 20px; margin-left: 540px;">
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;" type="number"
+            [(ngModel)]="sets" placeholder="sets" min="0" max="10" (input)="validateInput($event, 'sets', 0, 10)" />
+        <p style="
+        height: 2px;
+        padding: 2px;
+        margin: inherit;
+        " *ngIf="sets !== null">You entered: {{ sets }} sets</p>
+    </div>
+
+
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;" type="number"
+            [(ngModel)]="reps" placeholder="reps" min="0" max="30" (input)="validateInput($event, 'reps', 0, 30)" />
+        <p style="
+            height: 2px;
+            padding: 2px;
+            margin: inherit;
+            " *ngIf="reps !== null">You entered: {{ reps }} reps</p>
+    </div>
+</div>
+
+<div style="display: flex; gap: 20px; align-items: right; margin-bottom: 20px; margin-left: 540px;">
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;;" type="number"
+            [(ngModel)]="sets" placeholder="sets" min="0" max="10" (input)="validateInput($event, 'sets', 0, 10)" />
+        <p style="
+        height: 2px;
+        padding: 2px;
+        margin: inherit;
+        " *ngIf="sets !== null">You entered: {{ sets }} sets</p>
+    </div>
+
+
+    <div style="margin-bottom: 10px;">
+        <input style="width: 100px; height: 30px; font-size: 18px; padding: 5px; text-align: center;" type="number"
+            [(ngModel)]="reps" placeholder="reps" min="0" max="30" (input)="validateInput($event, 'reps', 0, 30)" />
+        <p style="
+            height: 2px;
+            padding: 2px;
+            margin: inherit;
+            " *ngIf="reps !== null">You entered: {{ reps }} reps</p>
+    </div>
 </div>
