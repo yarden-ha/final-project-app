@@ -12,9 +12,9 @@
             placeholder="sets"
             min="0"
             max="10"
-            
+            (input)="validateInput($event, 'sets', 0, 10)"
         />
-        <p *ngIf="sets">You entered: {{ sets }} </p>
+        <p *ngIf="sets !== null">You entered: {{ sets }} sets</p>
     </div>
 
     
@@ -26,8 +26,8 @@
                 placeholder="reps"
                 min="0"
                 max="30"
-                
+                (input)="validateInput($event, 'reps', 0, 30)"
             />
-            <p *ngIf="reps">You entered: {{ reps }} </p>
+            <p *ngIf="reps !== null">You entered: {{ reps }} reps</p>
         </div>
 </div>
