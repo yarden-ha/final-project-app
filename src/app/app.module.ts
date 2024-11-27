@@ -14,6 +14,7 @@ import { ExerciseProgramComponent } from './exercise-program/exercise-program.co
 import { provideHttpClient } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { DefaultExerciseComponent } from './default-exercise/default-exercise.component';
+import { TextBoxDefaultExerciseComponent } from './text-box-default-exercise/text-box-default-exercise.component';
 
 
 
@@ -24,7 +25,8 @@ import { DefaultExerciseComponent } from './default-exercise/default-exercise.co
     ChoicesComponent,
     CalibirationMethodsComponent,
     ExerciseProgramComponent,
-    DefaultExerciseComponent
+    DefaultExerciseComponent,
+    TextBoxDefaultExerciseComponent
   ],
   imports: [
     BrowserModule,
