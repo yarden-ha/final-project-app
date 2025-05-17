@@ -17,7 +17,7 @@ export class CalibirationMethodsComponent {
     this.showInput = !this.showInput;
     
     this.httpService.testGet().subscribe(val => {
-      console.log("sexy mustache")
+      console.log("it works!")
       console.log(val)
     });
   }
