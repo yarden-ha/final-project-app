@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { WebSocketClient } from './services/websocket.service';
 import { HttpService } from './services/http.service';
 
@@ -12,6 +12,7 @@ export class AppComponent {
 
   active: number = 0;
 
+  testVal = signal('0')
   constructor(private websocketClient: WebSocketClient, private httpClient: HttpService) { }
   connect() {
     console.log('connect');
@@ -19,7 +20,17 @@ export class AppComponent {
   }
   start() {
     console.log('start');
-    this.httpClient.initGetSensor().subscribe(val=>console.log(val)
-    )
+    this.httpClient.initGetSensor().subscribe(async val => {
+
+      console.log(val)
+
+      await this.websocketClient.addSignal('force')
+
+      this.testVal = this.websocketClient.getSignals().get('force')!
+
+
+    })
+
+
   }
 }

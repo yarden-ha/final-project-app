@@ -1,0 +1,23 @@
+<div class="gauge-container">
+  <svg viewBox="0 0 100 60" class="gauge">
+    <!-- Background arc -->
+    <path
+      d="M 10 50 A 40 40 0 0 1 90 50"
+      fill="none"
+      stroke="#e0e0e0"
+      stroke-width="10" />
+
+    <!-- Foreground arc -->
+    <path
+      [attr.d]="arcPath"
+      fill="none"
+      stroke="#4caf50"
+      stroke-width="10"
+      stroke-linecap="round" />
+
+    <!-- Value -->
+    <text x="50" y="35" text-anchor="middle" class="gauge-value">
+      {{ (this._value) }} {{ label }}
+    </text>
+  </svg>
+</div>

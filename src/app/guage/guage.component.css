@@ -1,0 +1,14 @@
+.gauge-container {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.gauge {
+  width: 100%;
+  height: auto;
+}
+
+.gauge-value {
+  font-size: 10px;
+  fill: #333;
+}
