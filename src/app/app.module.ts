@@ -15,6 +15,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { DefaultExerciseComponent } from './default-exercise/default-exercise.component';
 import { TextBoxDefaultExerciseComponent } from './text-box-default-exercise/text-box-default-exercise.component';
+import { WebSocketClient } from './services/websocket.service';
 
 
 
@@ -37,7 +38,8 @@ import { TextBoxDefaultExerciseComponent } from './text-box-default-exercise/tex
   ],
   providers: [
     provideHttpClient(),
-    HttpService
+    HttpService,
+    WebSocketClient
     
   ],
   

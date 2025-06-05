@@ -11,4 +11,8 @@ export class HttpService {
   testGet(){
     return this.httpClient.get('http://localhost:3000/')
   }
+  initGetSensor(){
+    return this.httpClient.get('http://localhost:3000/force')
+
+  }
 }

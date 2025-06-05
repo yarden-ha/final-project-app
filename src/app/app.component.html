@@ -1,5 +1,5 @@
 <div style="padding: 0 30px;">
-<p-stepper [(activeStep)]="active" [linear]="true">
+<!-- <p-stepper [(activeStep)]="active" [linear]="true">
     
     <p-stepperPanel header="Parameters Aquisition">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
@@ -86,5 +86,15 @@
         </ng-template>
     </p-stepperPanel>
 
-</p-stepper>
+</p-stepper> -->
+
+<button (click)="connect()" pButton pRipple severity="success">
+    <span pButtonLabel>CONNECT</span>
+</button>
+<button (click)="start()" pButton pRipple severity="success">
+    <span pButtonLabel>START</span>
+</button>
+    <div>
+        text
+    </div>
 </div>
