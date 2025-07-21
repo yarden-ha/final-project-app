@@ -60,7 +60,7 @@ calibrated_motion = (raw_motion - baseline) / sensitivity
 - `sensitivity`: The factor that adjusts the sensor's responsiveness
 
 ### Device Communication
-The server exposes HTTP endpoints for the Arduino to send commands and receive sensor data. Each device operation is mapped to a specific endpoint, ensuring modular and maintainable code.
+The server provides an HTTP API to control the Arduino, communicating with it via the Firmata protocol and the Johnny-Five library. This setup allows the server to send commands and receive sensor data seamlessly
 
 ## File Structure
 - `devices.json`: Contains configuration details for all connected devices
