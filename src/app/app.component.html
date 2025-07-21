@@ -94,6 +94,19 @@
     <button (click)="start()" pButton pRipple severity="success">
         <span pButtonLabel>START</span>
     </button>
-
+    <button (click)="tare()" pButton pRipple severity="success">
+        <span pButtonLabel>TARE</span>
+    </button>
     <app-guage [value]="testVal()"></app-guage>
 </div>
+
+
+<h1>Encoder Data</h1>
+<h2>5kOhm</h2>
+<app-encoder-graph [data]="graphData.get('encoder_recording_5kom.json') || []"></app-encoder-graph>
+<h2>10kOhm</h2>
+<app-encoder-graph [data]="graphData.get('encoder_recording_10kom.json') || []"></app-encoder-graph>
+<h2>No Resistors</h2>
+<app-encoder-graph [data]="graphData.get('experiment_no_resistors.json') || []"></app-encoder-graph>
+<h1>Engine Data</h1>
+<app-engine-graph [data]="engineData || []"></app-engine-graph>

@@ -17,6 +17,8 @@ import { DefaultExerciseComponent } from './default-exercise/default-exercise.co
 import { TextBoxDefaultExerciseComponent } from './text-box-default-exercise/text-box-default-exercise.component';
 import { WebSocketClient } from './services/websocket.service';
 import { GuageComponent } from './guage/guage.component';
+import { EncoderGraphComponent } from './components/encoder-graph/encoder-graph.component';
+import { EngineGraphComponent } from './components/engine-graph/engine-graph.component';
 
 
 
@@ -29,7 +31,9 @@ import { GuageComponent } from './guage/guage.component';
     ExerciseProgramComponent,
     DefaultExerciseComponent,
     TextBoxDefaultExerciseComponent,
-    GuageComponent
+    GuageComponent,
+    EncoderGraphComponent,
+    EngineGraphComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ export class WebSocketClient {
 
     }
     initConnection() {
-        this.websocketConnection = io('http://localhost:3000');
+        this.websocketConnection = io('http://'+window.location.hostname+':3000');
         this.websocketConnection?.on('sensor-data', this.handleMessage.bind(this))
         this.websocketConnection.on('connect', () => console.log('connected'));
     }

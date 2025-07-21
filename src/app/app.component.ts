@@ -1,7 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, Type } from '@angular/core';
 import { WebSocketClient } from './services/websocket.service';
 import { HttpService } from './services/http.service';
+import { EngineDataPoint } from './components/engine-graph/engine-graph.component';
 
+
+export type GraphData = { time: number, pinA: number, pinB: number }[]
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,7 +16,52 @@ export class AppComponent {
   active: number = 0;
 
   testVal = signal('0')
-  constructor(private websocketClient: WebSocketClient, private httpClient: HttpService) { }
+
+  graphData: Map<string, GraphData> = new Map();
+  engineData: EngineDataPoint[] = []
+
+  constructor(private websocketClient: WebSocketClient, private httpClient: HttpService) {
+    this.getEncoderGraphData('encoder_recording_5kom.json',)
+    this.getEncoderGraphData('encoder_recording_10kom.json')
+    this.getEncoderGraphData('experiment_no_resistors.json')
+    this.getEngineGraphData('pullhistory.json')
+  }
+
+  getEngineGraphData(graphName: string) {
+    this.httpClient.getGraphData(graphName).subscribe((data: any) => {
+      let rawData: EngineDataPoint[] = [...data];
+      console.log(data)
+      this.engineData = rawData.map(({rpm, delay, weight}) => ({
+        rpm: rpm,
+        delay: delay,
+        weight: weight
+      }));
+    })
+  }
+
+  getEncoderGraphData(graphName: string) {
+    this.httpClient.getGraphData(graphName).subscribe((data: any) => {
+      let rawData: [string, { A: number, B: number }][] = [...data];
+      console.log(data)
+      let dataCon = this.graphData.get(graphName) as GraphData
+      dataCon = rawData.map(([timestamp, pins]) => ({
+        time: new Date(timestamp).getTime(),
+        pinA: pins.A,
+        pinB: pins.B
+      }));
+    
+      this.graphData.set(graphName, dataCon)
+    })
+  }
+
+
+  tare() {
+    console.log('tare');
+    this.httpClient.tareScale().subscribe(async val => {
+      console.log(val)
+    })
+  }
+
   connect() {
     console.log('connect');
     this.websocketClient.initConnection()
@@ -31,6 +79,15 @@ export class AppComponent {
 
     })
 
+    // this.httpClient.initMotor().subscribe(async val => {
 
+    //   console.log(val)
+
+    //   await this.websocketClient.addSignal('motor')
+
+    //   this.testVal = this.websocketClient.getSignals().get('motor')!
+
+
+    // })
   }
 }

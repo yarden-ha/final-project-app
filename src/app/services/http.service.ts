@@ -9,10 +9,22 @@ export class HttpService {
   constructor(private httpClient: HttpClient) { }
 
   testGet(){
-    return this.httpClient.get('http://localhost:3000/')
+    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/')
   }
   initGetSensor(){
-    return this.httpClient.get('http://localhost:3000/force')
+    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/force')
 
+  }
+  getGraphData(graphName: string){
+    const apiBase = window.location.protocol + '//' + window.location.hostname + ':3000';
+    return this.httpClient.get(apiBase + '/files/' + graphName)
+  }
+  initMotor(){
+    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/motor')
+
+  }
+
+  tareScale(){
+    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/tare/force')
   }
 }
