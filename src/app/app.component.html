@@ -1,5 +1,5 @@
 <div style="padding: 0 30px;">
-    <!-- <p-stepper [(activeStep)]="active" [linear]="true">
+    <p-stepper [(activeStep)]="active" [linear]="true">
     
     <p-stepperPanel header="Parameters Aquisition">
         <ng-template pTemplate="content" let-nextCallback="nextCallback" let-index="index">
@@ -30,7 +30,7 @@
         </ng-template>
     </p-stepperPanel>
     
-    <p-stepperPanel header="Calibiration Methods">
+    <p-stepperPanel header="Sensor's Data">
         <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
             <div class="flex flex-column h-12rem">
                 <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
@@ -60,48 +60,24 @@
         </ng-template>
     </p-stepperPanel>
 
-    <p-stepperPanel header="ExerciseCustomize">
-        <ng-template pTemplate="content" let-index="index" >
-            <div class="flex flex-column h-12rem">
-                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                  content IV  
-                </div>
-            </div>
-            <div class="flex pt-4 justify-content-start">
-                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 3" />
-            </div>
-        </ng-template>
-    </p-stepperPanel>
+    
 
-    <p-stepperPanel header="DefaultExercise">
-        <ng-template pTemplate="content" let-index="index">
-            <div class="flex flex-column h-12rem">
-                <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-                    <app-default-exercise/>
-                </div>
-            </div>
-            <div class="flex pt-4 justify-content-start">
-                <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 3" />
-            </div>
-        </ng-template>
-    </p-stepperPanel>
+</p-stepper>
 
-</p-stepper> -->
-
-    <button (click)="connect()" pButton pRipple severity="success">
-        <span pButtonLabel>CONNECT</span>
-    </button>
-    <button (click)="start()" pButton pRipple severity="success">
-        <span pButtonLabel>START</span>
-    </button>
-    <button (click)="tare()" pButton pRipple severity="success">
-        <span pButtonLabel>TARE</span>
-    </button>
-    <app-guage [value]="testVal()"></app-guage>
 </div>
 
+<!-- <button (click)="connect()" pButton pRipple severity="success">
+    <span pButtonLabel>CONNECT</span>
+</button>
+<button (click)="start()" pButton pRipple severity="success">
+    <span pButtonLabel>START</span>
+</button>
+<button (click)="tare()" pButton pRipple severity="success">
+    <span pButtonLabel>TARE</span>
+</button>
+<app-guage [value]="testVal()"></app-guage> -->
 
-<h1>Encoder Data</h1>
+<!-- <h1>Encoder Data</h1>
 <h2>5kOhm</h2>
 <app-encoder-graph [data]="graphData.get('encoder_recording_5kom.json') || []"></app-encoder-graph>
 <h2>10kOhm</h2>
@@ -109,4 +85,4 @@
 <h2>No Resistors</h2>
 <app-encoder-graph [data]="graphData.get('experiment_no_resistors.json') || []"></app-encoder-graph>
 <h1>Engine Data</h1>
-<app-engine-graph [data]="engineData || []"></app-engine-graph>
+<app-engine-graph [data]="engineData || []"></app-engine-graph> -->

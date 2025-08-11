@@ -7,13 +7,13 @@ import { HttpService } from '../services/http.service';
   styleUrl: './calibiration-methods.component.css'
 })
 export class CalibirationMethodsComponent {
-  title= "Calibiration Mode Selection";
+  title= "Sensor's Data";
   
   showInput = false;
 
   constructor(private httpService: HttpService) {}
 
-  Rehabilitation(){
+  Start(){
     this.showInput = !this.showInput;
     
     this.httpService.testGet().subscribe(val => {
@@ -22,11 +22,19 @@ export class CalibirationMethodsComponent {
     });
   }
 
-  Intense(){
+  Stop(){
     this.showInput = !this.showInput;
 
     this.httpService.testGet().subscribe(val => {
-      console.log("sexy mustache")
+      console.log("works")
+      console.log(val)
+    });
+  }
+  ChangeDirection(){
+    this.showInput = !this.showInput;
+
+    this.httpService.testGet().subscribe(val => {
+      console.log("works")
       console.log(val)
     });
   }

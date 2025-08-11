@@ -10,9 +10,9 @@ export class WebSocketClient {
     websocketConnection?: Socket
 
     dataSignals: Map<string, WritableSignal<string>> = new Map<string, WritableSignal<string>>();
-    constructor() {
+   
+    constructor() {}
 
-    }
     initConnection() {
         this.websocketConnection = io('http://'+window.location.hostname+':3000');
         this.websocketConnection?.on('sensor-data', this.handleMessage.bind(this))
