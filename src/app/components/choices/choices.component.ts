@@ -6,7 +6,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrl: './choices.component.css'
 })
 export class ChoicesComponent {
-  title = "Machine or Exercise Setup";
+  title = "Menu";
 
   @Output() calibration = new EventEmitter<void>();
   @Output() exercises = new EventEmitter<void>();

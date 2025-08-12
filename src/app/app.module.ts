@@ -19,8 +19,9 @@ import { WebSocketClient } from './services/websocket.service';
 import { GuageComponent } from './guage/guage.component';
 import { EncoderGraphComponent } from './components/encoder-graph/encoder-graph.component';
 import { EngineGraphComponent } from './components/engine-graph/engine-graph.component';
-
-
+import { ToolbarModule } from 'primeng/toolbar';
+import { AvatarModule } from 'primeng/avatar';
+import { AvatarGroupModule } from 'primeng/avatargroup';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,10 @@ import { EngineGraphComponent } from './components/engine-graph/engine-graph.com
     AppRoutingModule,
     FormsModule,
     ButtonModule,
-    StepperModule
+    StepperModule,
+    ToolbarModule,
+    AvatarModule,
+    AvatarGroupModule
   ],
   providers: [
     provideHttpClient(),
