@@ -10,88 +10,10 @@
   <button (click)="displayInfoDialog = false" style="margin-top:1rem;">Close</button>
 </div>
 
-
 <p-menubar [model]="items">
   <ng-template pTemplate="start">
   </ng-template>
 </p-menubar>
 
-<div style="padding: 0 30px;">
-  <p-stepper [(activeStep)]="active" [linear]="true">
-    
-
-    <p-stepperPanel header="CARE Program">
-      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-        <div class="flex flex-column h-12rem">
-          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-            
-            <app-choices 
-              (calibration)="active = 1"
-              (exercises)="active = 2"
-              style="text-align: center;">
-            </app-choices>
-          </div>
-        </div>
-        <div class="flex pt-4 justify-content-between">
-          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" />
-        </div>
-      </ng-template>
-    </p-stepperPanel>
-
-    
-    <p-stepperPanel header="Parameters Aquisition">
-      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-        <div class="flex flex-column h-12rem">
-          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-            <app-parameter style="text-align: center;"></app-parameter>
-          </div>
-        </div>
-            <div class="flex pt-4 justify-content-end gap-2">
-            <p-button label="Back" icon="pi pi-arrow-left"
-                        (onClick)="prevCallback.emit()"></p-button>
-            
-            </div>
-
-
-      </ng-template>
-    </p-stepperPanel>
-
-    
-    <!-- (now index 3) Sensor's Data -->
-    <p-stepperPanel header="Sensor's Data">
-      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-        <div class="flex flex-column h-12rem">
-          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-            <app-calibiration-methods style="text-align: center;"></app-calibiration-methods>
-          </div>
-        </div>
-        <div class="flex pt-4 justify-content-start">
-          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="prevCallback.emit()" (onClick)="active = 0" />
-        </div>
-      </ng-template>
-    </p-stepperPanel>
-
-  </p-stepper>
-</div>
-
-<!-- <button (click)="connect()" pButton pRipple severity="success">
-    <span pButtonLabel>CONNECT</span>
-</button>
-<button (click)="start()" pButton pRipple severity="success">
-    <span pButtonLabel>START</span>
-</button>
-<button (click)="tare()" pButton pRipple severity="success">
-    <span pButtonLabel>TARE</span>
-</button>
-<app-guage [value]="testVal()"></app-guage> -->
-
-<!-- <h1>Encoder Data</h1>
-<h2>5kOhm</h2>
-<app-encoder-graph [data]="graphData.get('encoder_recording_5kom.json') || []"></app-encoder-graph>
-<h2>10kOhm</h2>
-<app-encoder-graph [data]="graphData.get('encoder_recording_10kom.json') || []"></app-encoder-graph>
-<h2>No Resistors</h2>
-<app-encoder-graph [data]="graphData.get('experiment_no_resistors.json') || []"></app-encoder-graph>
-<h1>Engine Data</h1>
-<app-engine-graph [data]="engineData || []"></app-engine-graph> -->
+<router-outlet></router-outlet>
 

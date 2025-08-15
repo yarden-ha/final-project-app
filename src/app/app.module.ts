@@ -1,3 +1,4 @@
+import { CareProgramComponent } from './care-program.component';
 import { DialogModule } from 'primeng/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -24,6 +25,7 @@ import { ToolbarModule } from 'primeng/toolbar';
 import { MenubarModule } from 'primeng/menubar';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
+import { HomePageComponent } from './home-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     TextBoxDefaultExerciseComponent,
     GuageComponent,
     EncoderGraphComponent,
-    EngineGraphComponent
+  EngineGraphComponent,
+  HomePageComponent,
+  CareProgramComponent
   ],
   imports: [
     BrowserModule,

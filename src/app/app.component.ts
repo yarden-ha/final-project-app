@@ -33,12 +33,16 @@ export class AppComponent {
       label: 'CARE',
       icon: 'pi pi-tablet',
       command: () => {
+        this.router.navigate(['/care']);
         this.active = 0;
       }
     },
     {
       label: 'Home',
-      icon: 'pi pi-home'
+      icon: 'pi pi-home',
+      command: () => {
+        this.router.navigate(['/']);
+      }
     },
     {
       label: 'Info',
