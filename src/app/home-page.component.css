@@ -1,9 +1,8 @@
 
 .home-bg {
-  background: url('../../public/images/pro2.jpg') no-repeat center center fixed;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: url('../../public/images/pro2.jpg') left center no-repeat, url('../../public/images/pro1.jpg') right center no-repeat;
+  background-size: 50vw 100vh, 50vw 100vh;
+  background-position: left center, right center;
   width: 100vw;
   height: 100vh;
   position: fixed;
