@@ -10,14 +10,6 @@
   <button (click)="displayInfoDialog = false" style="margin-top:1rem;">Close</button>
 </div>
 
-<p-dialog header="Information" [(visible)]="displayInfoDialog" [modal]="true" [style]="{width: '400px', 'z-index': 9999, 'background': '#222', 'color': '#fff', 'border': '2px solid #00ffae', 'padding': '2rem'}">
-  <div style="color: #fff; background: #222; padding: 1rem; border-radius: 8px;">
-    <h3 style="color: #00ffae;">CARE Prototype Overview</h3>
-    <p>
-      The Connected Adaptive Resistance Exercise (CARE) prototype is a rehabilitation and training device designed to adapt resistance in real time based on user performance. It combines a Raspberry Pi, Arduino, high-torque stepper motor, load sensors, and an incremental encoder to monitor force, movement, and training parameters. This data is processed to provide precise, safe, and personalized exercise loads, especially for individuals with physical limitations or undergoing rehabilitation.
-    </p>
-  </div>
-</p-dialog>
 
 <p-menubar [model]="items">
   <ng-template pTemplate="start">
