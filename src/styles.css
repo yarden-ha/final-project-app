@@ -1,5 +1,6 @@
 @import "primeng/resources/themes/aura-dark-green/theme.css";
-@import "primeng/resources/primeng.css";
+@import "primeng/resources/primeng.min.css";
+@import "primeicons/primeicons.css";
 
 body {
     background: radial-gradient(circle, rgb(207 244 230 / 25%) 0%, rgb(17 30 43 / 84%) 100%);

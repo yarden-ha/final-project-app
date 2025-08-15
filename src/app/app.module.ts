@@ -20,6 +20,7 @@ import { GuageComponent } from './guage/guage.component';
 import { EncoderGraphComponent } from './components/encoder-graph/encoder-graph.component';
 import { EngineGraphComponent } from './components/engine-graph/engine-graph.component';
 import { ToolbarModule } from 'primeng/toolbar';
+import { MenubarModule } from 'primeng/menubar';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 
@@ -42,9 +43,10 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
     FormsModule,
     ButtonModule,
     StepperModule,
-    ToolbarModule,
-    AvatarModule,
-    AvatarGroupModule
+  ToolbarModule,
+  MenubarModule,
+  AvatarModule,
+  AvatarGroupModule
   ],
   providers: [
     provideHttpClient(),

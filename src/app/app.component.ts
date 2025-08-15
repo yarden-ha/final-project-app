@@ -13,6 +13,21 @@ export type GraphData = { time: number, pinA: number, pinB: number }[]
 export class AppComponent {
   title = 'final-project';
 
+  items = [
+    {
+      label: 'CARE',
+      icon: 'pi pi-tablet'
+    },
+    {
+      label: 'Home',
+      icon: 'pi pi-home'
+    },
+    {
+      label: 'Info',
+      icon: 'pi pi-info-circle'
+    }
+  ];
+
   // Start on the new Account step (index 0)
   active: number = 0;
 
