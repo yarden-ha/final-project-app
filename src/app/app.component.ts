@@ -1,4 +1,6 @@
+import { DialogModule } from 'primeng/dialog';
 import { Component, signal, Type } from '@angular/core';
+import { Router } from '@angular/router';
 import { WebSocketClient } from './services/websocket.service';
 import { HttpService } from './services/http.service';
 import { EngineDataPoint } from './components/engine-graph/engine-graph.component';
@@ -10,13 +12,29 @@ export type GraphData = { time: number, pinA: number, pinB: number }[]
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'final-project';
+  displayInfoDialog = false;
+
+  constructor(
+    private websocketClient: WebSocketClient,
+    private httpClient: HttpService,
+    public router: Router
+  ) {
+    this.getEncoderGraphData('encoder_recording_5kom.json',)
+    this.getEncoderGraphData('encoder_recording_10kom.json')
+    this.getEncoderGraphData('experiment_no_resistors.json')
+    this.getEngineGraphData('pullhistory.json')
+  }
 
   items = [
     {
       label: 'CARE',
-      icon: 'pi pi-tablet'
+      icon: 'pi pi-tablet',
+      command: () => {
+        this.active = 0;
+      }
     },
     {
       label: 'Home',
@@ -24,7 +42,10 @@ export class AppComponent {
     },
     {
       label: 'Info',
-      icon: 'pi pi-info-circle'
+      icon: 'pi pi-info-circle',
+      command: () => {
+        this.displayInfoDialog = true;
+      }
     }
   ];
 
@@ -43,12 +64,6 @@ export class AppComponent {
   activeStep: any;
 prevCallback: any;
 
-  constructor(private websocketClient: WebSocketClient, private httpClient: HttpService) {
-    this.getEncoderGraphData('encoder_recording_5kom.json',)
-    this.getEncoderGraphData('encoder_recording_10kom.json')
-    this.getEncoderGraphData('experiment_no_resistors.json')
-    this.getEngineGraphData('pullhistory.json')
-  }
 
   // Optional: if you want your Continue button to do anything custom
   onAccountContinue() {

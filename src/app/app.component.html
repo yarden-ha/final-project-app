@@ -1,3 +1,24 @@
+<div *ngIf="displayInfoDialog" style="position:fixed;top:100px;left:50%;transform:translateX(-50%);z-index:10000;background:#222;color:#fff;padding:2rem;border:2px solid #00ffae;border-radius:8px;">
+  <h3 style="color: #00ffae;">CARE Prototype Overview </h3>
+  <p>
+    The Connected Adaptive Resistance Exercise (CARE) prototype is a rehabilitation and training device designed to adapt resistance in real time based on user performance. It combines a Raspberry Pi, Arduino, high-torque stepper motor, load sensors, and an incremental encoder to monitor force, movement, and training parameters. This data is processed to provide precise, safe, and personalized exercise loads, especially for individuals with physical limitations or undergoing rehabilitation.
+  </p>
+  <h3 style="color: #00ffae;">System Functionality</h3>
+  <p>
+    The Raspberry Pi serves as the main controller, running the interface and adaptive algorithms, while the Arduino manages real-time sensor readings and motor control. Using feedback from the force sensor and encoder, the system dynamically adjusts motor velocity according to the force applied by the user. This approach allows the user to control the pace of movement naturally, while the system ensures consistent resistance and accurate performance tracking, creating an effective and engaging rehabilitation experience.
+  </p>
+  <button (click)="displayInfoDialog = false" style="margin-top:1rem;">Close</button>
+</div>
+
+<p-dialog header="Information" [(visible)]="displayInfoDialog" [modal]="true" [style]="{width: '400px', 'z-index': 9999, 'background': '#222', 'color': '#fff', 'border': '2px solid #00ffae', 'padding': '2rem'}">
+  <div style="color: #fff; background: #222; padding: 1rem; border-radius: 8px;">
+    <h3 style="color: #00ffae;">CARE Prototype Overview</h3>
+    <p>
+      The Connected Adaptive Resistance Exercise (CARE) prototype is a rehabilitation and training device designed to adapt resistance in real time based on user performance. It combines a Raspberry Pi, Arduino, high-torque stepper motor, load sensors, and an incremental encoder to monitor force, movement, and training parameters. This data is processed to provide precise, safe, and personalized exercise loads, especially for individuals with physical limitations or undergoing rehabilitation.
+    </p>
+  </div>
+</p-dialog>
+
 <p-menubar [model]="items">
   <ng-template pTemplate="start">
   </ng-template>
@@ -44,8 +65,6 @@
     </p-stepperPanel>
 
     
-    
-
     <!-- (now index 3) Sensor's Data -->
     <p-stepperPanel header="Sensor's Data">
       <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
@@ -83,3 +102,4 @@
 <app-encoder-graph [data]="graphData.get('experiment_no_resistors.json') || []"></app-encoder-graph>
 <h1>Engine Data</h1>
 <app-engine-graph [data]="engineData || []"></app-engine-graph> -->
+

@@ -1,3 +1,4 @@
+import { DialogModule } from 'primeng/dialog';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -46,7 +47,8 @@ import { AvatarGroupModule } from 'primeng/avatargroup';
   ToolbarModule,
   MenubarModule,
   AvatarModule,
-  AvatarGroupModule
+  AvatarGroupModule,
+  DialogModule
   ],
   providers: [
     provideHttpClient(),
