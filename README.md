@@ -1,5 +1,19 @@
 # FinalProject
 
+## Docker Usage
+
+To build and run this Angular app with Docker:
+
+```sh
+# Build the Docker image
+sudo docker build -t final-project-app .
+
+# Run the container (serves on http://localhost:8080)
+sudo docker run -p 8080:80 final-project-app
+```
+
+---
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
 
 ## Development server

@@ -1,0 +1,57 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Abstract geometric lines representing movement and progress -->
+  <g stroke="#883CAE" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Main flow lines -->
+    <path d="M50 300 Q200 100 400 250 T750 200" stroke-width="3"/>
+    <path d="M100 400 Q300 200 500 350 T700 300" stroke-width="2"/>
+    <path d="M0 450 Q150 350 350 400 Q550 450 800 350" stroke-width="2"/>
+    
+    <!-- Sharp angular elements -->
+    <path d="M150 50 L200 100 L180 150 L220 200 L160 180" stroke-width="2"/>
+    <path d="M600 80 L650 120 L680 100 L700 150 L640 140" stroke-width="2"/>
+    
+    <!-- Interconnected nodes -->
+    <circle cx="200" cy="150" r="4" fill="#883CAE"/>
+    <circle cx="400" cy="280" r="4" fill="#883CAE"/>
+    <circle cx="600" cy="220" r="4" fill="#883CAE"/>
+    
+    <!-- Connection lines -->
+    <line x1="200" y1="150" x2="400" y2="280" stroke-width="1"/>
+    <line x1="400" y1="280" x2="600" y2="220" stroke-width="1"/>
+    
+    <!-- Abstract movement waves -->
+    <path d="M50 500 Q100 480 150 500 T250 480 T350 500 T450 480" stroke-width="1"/>
+    <path d="M450 520 Q500 500 550 520 T650 500 T750 520" stroke-width="1"/>
+    
+    <!-- Sharp diagonal elements -->
+    <path d="M500 50 L520 90 L540 70 L560 110 L580 90 L600 130" stroke-width="2"/>
+    <path d="M100 550 L120 530 L140 550 L160 520 L180 540 L200 510" stroke-width="2"/>
+    
+    <!-- Vertical progress lines -->
+    <line x1="350" y1="100" x2="350" y2="500" stroke-width="1" stroke-dasharray="5,5"/>
+    <line x1="450" y1="80" x2="450" y2="520" stroke-width="1" stroke-dasharray="3,7"/>
+    
+    <!-- Abstract geometric shapes -->
+    <polygon points="700,400 720,380 740,400 720,420" stroke-width="2"/>
+    <polygon points="80,200 100,180 120,200 100,220" stroke-width="2"/>
+    
+    <!-- Flow indicators -->
+    <path d="M300 350 L320 340 L310 360 L330 350" stroke-width="2"/>
+    <path d="M500 180 L520 170 L510 190 L530 180" stroke-width="2"/>
+  </g>
+  
+  <!-- Secondary layer with lighter opacity -->
+  <g stroke="#a855f7" stroke-width="1" fill="none" opacity="0.3">
+    <path d="M0 200 Q200 300 400 150 Q600 50 800 200" stroke-width="1"/>
+    <path d="M0 350 Q150 250 300 350 Q450 450 600 300 Q700 250 800 400" stroke-width="1"/>
+    
+    <!-- Small detail elements -->
+    <circle cx="250" cy="320" r="2" fill="#a855f7"/>
+    <circle cx="550" cy="180" r="2" fill="#a855f7"/>
+    <circle cx="150" cy="400" r="2" fill="#a855f7"/>
+    
+    <!-- Connecting fine lines -->
+    <line x1="250" y1="320" x2="550" y2="180" stroke-width="0.5"/>
+    <line x1="550" y1="180" x2="150" y2="400" stroke-width="0.5"/>
+  </g>
+</svg>

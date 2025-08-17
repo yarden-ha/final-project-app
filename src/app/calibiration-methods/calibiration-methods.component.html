@@ -4,6 +4,12 @@
 
 </div>
 
+<!-- Connection Status Light -->
+<div class="connection-status">
+    <div class="status-light" [class.connected]="connectionEstablished" [class.disconnected]="!connectionEstablished"></div>
+    <span class="status-text">{{ connectionEstablished ? 'Connected' : 'Disconnected' }}</span>
+</div>
+
     <div style="margin-bottom: 20px;">
             <button 
             pButton type="button"  

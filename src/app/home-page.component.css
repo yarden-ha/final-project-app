@@ -1,8 +1,9 @@
 
 .home-bg {
-  background: url('../../public/images/pro2.jpg') left center no-repeat, url('../../public/images/pro1.jpg') right center no-repeat;
-  background-size: 50vw 100vh, 50vw 100vh;
-  background-position: left center, right center;
+  background: url('../../public/images/test.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -14,10 +15,25 @@
 }
 
 .home-title {
-  color: #fff;
-  font-size: 2.5rem;
-  background: rgba(0,0,0,0.5);
+  font-size: 5rem;
+  font-weight: 900;
   padding: 2rem 3rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 32px #000a;
+  /* Remove background - we want the mask effect */
+  background: transparent;
+  color: transparent;
+}
+
+.mask1 {
+  background: url('../../public/images/test.jpg');
+  background-size: 150% 150%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  transform: scale(1.5);
+  text-shadow: 3px 2px 2px rgb(0 0 0 / 30%);
 }

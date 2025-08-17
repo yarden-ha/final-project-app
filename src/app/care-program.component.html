@@ -1,44 +1,46 @@
-<p-stepper [(activeStep)]="active" [linear]="true">
-  <p-stepperPanel header="CARE Program">
-    <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-      <div class="flex flex-column h-12rem">
-        <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-          <app-choices 
-            (calibration)="active = 1"
-            (exercises)="active = 2"
-            style="text-align: center;">
-          </app-choices>
+<div class="stepper-container">
+  <p-stepper [(activeStep)]="active" [linear]="true">
+    <p-stepperPanel header="CARE Program">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <app-choices 
+              (calibration)="active = 1"
+              (exercises)="active = 2"
+              style="text-align: center;">
+            </app-choices>
+          </div>
         </div>
-      </div>
-      <div class="flex pt-4 justify-content-between">
-        <p-button label="Back" icon="pi pi-arrow-left" (onClick)="goHome()" />
-      </div>
-    </ng-template>
-  </p-stepperPanel>
+        <div class="flex pt-4 justify-content-between">
+          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="goHome()" />
+        </div>
+      </ng-template>
+    </p-stepperPanel>
 
-  <p-stepperPanel header="Parameters Aquisition">
-    <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-      <div class="flex flex-column h-12rem">
-        <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-          <app-parameter style="text-align: center;"></app-parameter>
+    <p-stepperPanel header="Parameters Aquisition">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <app-parameter style="text-align: center;"></app-parameter>
+          </div>
         </div>
-      </div>
-      <div class="flex pt-4 justify-content-end gap-2">
-        <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 0"></p-button>
-      </div>
-    </ng-template>
-  </p-stepperPanel>
+        <div class="flex pt-4 justify-content-end gap-2">
+          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 0"></p-button>
+        </div>
+      </ng-template>
+    </p-stepperPanel>
 
-  <p-stepperPanel header="Sensor's Data">
-    <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
-      <div class="flex flex-column h-12rem">
-        <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
-          <app-calibiration-methods style="text-align: center;"></app-calibiration-methods>
+    <p-stepperPanel header="Sensor's Data">
+      <ng-template pTemplate="content" let-prevCallback="prevCallback" let-index="index">
+        <div class="flex flex-column h-12rem">
+          <div class="border-2 border-dashed surface-border border-round surface-ground flex-auto flex justify-content-center align-items-center font-medium">
+            <app-calibiration-methods style="text-align: center;"></app-calibiration-methods>
+          </div>
         </div>
-      </div>
-      <div class="flex pt-4 justify-content-start">
-        <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 0" />
-      </div>
-    </ng-template>
-  </p-stepperPanel>
-</p-stepper>
+        <div class="flex pt-4 justify-content-start">
+          <p-button label="Back" icon="pi pi-arrow-left" (onClick)="active = 0" />
+        </div>
+      </ng-template>
+    </p-stepperPanel>
+  </p-stepper>
+</div>

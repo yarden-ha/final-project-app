@@ -1,0 +1,95 @@
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main device control units - rectangular forms -->
+  <g stroke="#883CAE" stroke-width="2" fill="none" opacity="0.7">
+    <!-- Central control unit -->
+    <rect x="300" y="200" width="120" height="80" stroke-width="2" rx="4"/>
+    <rect x="310" y="210" width="100" height="15" stroke-width="1"/>
+    <rect x="310" y="230" width="100" height="15" stroke-width="1"/>
+    <rect x="310" y="250" width="100" height="15" stroke-width="1"/>
+    
+    <!-- Secondary device -->
+    <rect x="150" y="180" width="100" height="60" stroke-width="2" rx="3"/>
+    <circle cx="200" cy="210" r="8" stroke-width="1"/>
+    <rect x="160" y="190" width="80" height="8" stroke-width="1"/>
+    
+    <!-- Sensor/probe device -->
+    <rect x="500" y="220" width="80" height="50" stroke-width="2" rx="2"/>
+    <rect x="510" y="230" width="60" height="6" stroke-width="1"/>
+    <rect x="510" y="240" width="60" height="6" stroke-width="1"/>
+    
+    <!-- Table/surface outline -->
+    <path d="M100 320 L600 320 L590 340 L110 340 Z" stroke-width="1" opacity="0.5"/>
+    
+    <!-- Table legs - angular lines -->
+    <path d="M120 340 L110 380 L105 420" stroke-width="2"/>
+    <path d="M580 340 L590 380 L595 420" stroke-width="2"/>
+    <path d="M300 340 L295 380 L290 420" stroke-width="2"/>
+    <path d="M400 340 L405 380 L410 420" stroke-width="2"/>
+  </g>
+  
+  <!-- Connecting wires and cables - curved dynamic lines -->
+  <g stroke="#a855f7" stroke-width="2" fill="none" opacity="0.8">
+    <!-- Main connection paths -->
+    <path d="M250 210 Q275 190 300 210" stroke-width="2"/>
+    <path d="M420 240 Q450 220 500 240" stroke-width="2"/>
+    <path d="M400 280 Q430 300 460 290 Q490 280 520 295" stroke-width="2"/>
+    
+    <!-- Sensor cables -->
+    <path d="M580 245 Q620 240 650 260 Q680 280 700 270" stroke-width="1.5"/>
+    <path d="M500 270 Q480 290 460 310 Q440 330 420 315" stroke-width="1.5"/>
+    
+    <!-- Power/data cables -->
+    <path d="M150 240 Q120 250 90 270 Q60 290 40 280" stroke-width="1.5"/>
+    <path d="M200 240 Q180 260 160 280 Q140 300 120 290" stroke-width="1.5"/>
+    
+    <!-- Interconnect wires -->
+    <path d="M310 280 Q330 300 350 285 Q370 270 390 285" stroke-width="1"/>
+    <path d="M360 200 Q380 180 400 195 Q420 210 440 195" stroke-width="1"/>
+  </g>
+  
+  <!-- Sharp geometric elements and indicators -->
+  <g stroke="#6366f1" stroke-width="1" fill="none" opacity="0.6">
+    <!-- Status indicators -->
+    <circle cx="330" cy="220" r="3" fill="#ff4444"/>
+    <circle cx="350" cy="220" r="3" fill="#44ff44"/>
+    <circle cx="370" cy="220" r="3" fill="#4444ff"/>
+    
+    <!-- Connection points -->
+    <circle cx="250" cy="210" r="2" stroke-width="1"/>
+    <circle cx="420" cy="240" r="2" stroke-width="1"/>
+    <circle cx="580" cy="245" r="2" stroke-width="1"/>
+    <circle cx="150" cy="240" r="2" stroke-width="1"/>
+    
+    <!-- Technical measurement lines -->
+    <line x1="100" y1="150" x2="600" y2="150" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="100" y1="350" x2="600" y2="350" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="100" y1="150" x2="100" y2="350" stroke-width="1" stroke-dasharray="3,3"/>
+    <line x1="600" y1="150" x2="600" y2="350" stroke-width="1" stroke-dasharray="3,3"/>
+    
+    <!-- Measurement arrows -->
+    <path d="M95 145 L105 150 L95 155" stroke-width="1"/>
+    <path d="M605 145 L595 150 L605 155" stroke-width="1"/>
+    
+    <!-- Signal flow indicators -->
+    <path d="M275 185 L285 190 L275 195" stroke-width="1"/>
+    <path d="M445 215 L455 220 L445 225" stroke-width="1"/>
+    <path d="M615 235 L625 240 L615 245" stroke-width="1"/>
+  </g>
+  
+  <!-- Abstract data flow visualization -->
+  <g stroke="#c084fc" stroke-width="1" fill="none" opacity="0.4">
+    <!-- Data streams -->
+    <path d="M320 190 Q340 170 360 190 Q380 210 400 190" stroke-width="1"/>
+    <path d="M170 170 Q190 150 210 170 Q230 190 250 170" stroke-width="1"/>
+    <path d="M520 210 Q540 190 560 210 Q580 230 600 210" stroke-width="1"/>
+    
+    <!-- Network connections -->
+    <path d="M200 160 L350 160 L500 160" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <path d="M200 300 L350 300 L500 300" stroke-width="0.5" stroke-dasharray="2,2"/>
+    
+    <!-- Vertical data lines -->
+    <line x1="200" y1="160" x2="200" y2="300" stroke-width="0.5" stroke-dasharray="1,3"/>
+    <line x1="350" y1="160" x2="350" y2="300" stroke-width="0.5" stroke-dasharray="1,3"/>
+    <line x1="500" y1="160" x2="500" y2="300" stroke-width="0.5" stroke-dasharray="1,3"/>
+  </g>
+</svg>

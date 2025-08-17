@@ -30,6 +30,13 @@ export class AppComponent {
 
   items = [
     {
+      label: 'Home',
+      icon: 'pi pi-home',
+      command: () => {
+        this.router.navigate(['/']);
+      }
+    },
+    {
       label: 'CARE',
       icon: 'pi pi-tablet',
       command: () => {
@@ -38,17 +45,10 @@ export class AppComponent {
       }
     },
     {
-      label: 'Home',
-      icon: 'pi pi-home',
-      command: () => {
-        this.router.navigate(['/']);
-      }
-    },
-    {
-      label: 'Info',
+      label: 'About',
       icon: 'pi pi-info-circle',
       command: () => {
-        this.displayInfoDialog = true;
+        this.router.navigate(['/about']);
       }
     }
   ];
@@ -66,7 +66,7 @@ export class AppComponent {
   graphData: Map<string, GraphData> = new Map();
   engineData: EngineDataPoint[] = []
   activeStep: any;
-prevCallback: any;
+  prevCallback: any;
 
 
   // Optional: if you want your Continue button to do anything custom

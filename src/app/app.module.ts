@@ -26,6 +26,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { AvatarModule } from 'primeng/avatar';
 import { AvatarGroupModule } from 'primeng/avatargroup';
 import { HomePageComponent } from './home-page.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { HomePageComponent } from './home-page.component';
     EncoderGraphComponent,
   EngineGraphComponent,
   HomePageComponent,
-  CareProgramComponent
+  CareProgramComponent,
+  AboutComponent
   ],
   imports: [
     BrowserModule,

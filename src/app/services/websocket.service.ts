@@ -10,13 +10,16 @@ export class WebSocketClient {
     websocketConnection?: Socket
 
     dataSignals: Map<string, WritableSignal<string>> = new Map<string, WritableSignal<string>>();
-   
+    connected = signal(false);
     constructor() {}
 
     initConnection() {
         this.websocketConnection = io('http://'+window.location.hostname+':3000');
         this.websocketConnection?.on('sensor-data', this.handleMessage.bind(this))
-        this.websocketConnection.on('connect', () => console.log('connected'));
+        this.websocketConnection.on('connect', () =>{
+            this.connected.set(true);
+            console.log('connected');
+        });
     }
 
     handleMessage(data: { sensor: string, value: string }) {

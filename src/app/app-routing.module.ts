@@ -4,9 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomePageComponent } from './home-page.component';
 import { CareProgramComponent } from './care-program.component';
+import { AboutComponent } from './components/about/about.component';
 const routes: Routes = [
   { path: '', component: HomePageComponent },
-  { path: 'care', component: CareProgramComponent }
+  { path: 'care', component: CareProgramComponent },
+  { path: 'about', component: AboutComponent }
 ];
 
 @NgModule({
