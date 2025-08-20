@@ -1,39 +1,29 @@
 <div>
-    
-    <h1> {{ title }}</h1>
-
+        <h1> {{ title }}</h1>
 </div>
 
 <!-- Connection Status Light -->
 <div class="connection-status">
-    <div class="status-light" [class.connected]="connectionEstablished" [class.disconnected]="!connectionEstablished"></div>
-    <span class="status-text">{{ connectionEstablished ? 'Connected' : 'Disconnected' }}</span>
+        <div class="status-light" [class.connected]="connectionEstablished"
+                [class.disconnected]="!connectionEstablished"></div>
+        <span class="status-text">{{ connectionEstablished ? 'Connected' : 'Disconnected' }}</span>
 </div>
 
-    <div style="margin-bottom: 20px;">
-            <button 
-            pButton type="button"  
-            label="Start"
-            style="font-size: larger;"
-            (click)="Start()" >
-            </button>
-    </div>
+<div style="margin-bottom: 20px;">
+        <button pButton type="button" label="Start" style="font-size: larger;" (click)="Start()">
+        </button>
+</div>
 
 
-    <div style="margin-bottom: 20px;">
-            <button 
-            pButton type="button"  
-            label="Stop"
-            style="font-size: larger;"
-            (click)="Stop()" >
-            </button>
-    </div>
+<div style="margin-bottom: 20px;">
+        <button pButton type="button" label="Stop" style="font-size: larger;" (click)="Stop()">
+        </button>
+</div>
 
-    <div style="margin-bottom: 20px;">
-            <button 
-            pButton type="button"  
-            label="Change Direction"
-            style="font-size: larger;"
-            (click)="ChangeDirection()" >
-            </button>
-    </div>
+<div style="margin-bottom: 20px;">
+        <button pButton type="button" label="Change Direction" style="font-size: larger;" (click)="ChangeDirection()">
+        </button>
+</div>
+<div>
+        <app-guage [value]="gaugeVal()"></app-guage>
+</div>

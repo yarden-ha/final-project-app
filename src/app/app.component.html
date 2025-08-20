@@ -8,11 +8,14 @@
   <button (click)="displayInfoDialog = false" style="margin-top:1rem;">Close</button>
 </div>
 
-<div class="menubar-center-wrapper">
-  <p-menubar [model]="items">
-    <ng-template pTemplate="start">
-    </ng-template>
-  </p-menubar>
-</div>
+<p-menubar [model]="items">
+  <ng-template pTemplate="start">
+    <!-- Empty or put a small icon here if you want -->
+  </ng-template>
+  <ng-template pTemplate="end">
+    <!-- Empty or put user/profile icon here if you want -->
+  </ng-template>
+</p-menubar>
+<div class="navbar-center-logo">CARE DEVICE</div>
 
 <router-outlet></router-outlet>

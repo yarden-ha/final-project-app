@@ -23,7 +23,10 @@ export class HttpService {
     return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/motor')
 
   }
+  stopMotor(){
+    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/stop/motor')
 
+  }
   tareScale(){
     return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/tare/force')
   }

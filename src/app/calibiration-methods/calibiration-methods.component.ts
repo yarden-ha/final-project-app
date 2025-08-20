@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HttpService } from '../services/http.service';
 import { WebSocketClient } from '../services/websocket.service';
 
@@ -8,10 +8,10 @@ import { WebSocketClient } from '../services/websocket.service';
   styleUrl: './calibiration-methods.component.css'
 })
 export class CalibirationMethodsComponent {
-  title= "Sensor's Data";
-  
-  showInput = false;
+  title = "Sensor's Data";
 
+  showInput = false;
+  gaugeVal = signal('0')
   constructor(private httpService: HttpService, public websocketClient: WebSocketClient) {
     this.websocketClient.initConnection();
   }
@@ -21,29 +21,30 @@ export class CalibirationMethodsComponent {
     return this.websocketClient.connected();
   }
 
-  Start(){
+  Start() {
     this.showInput = !this.showInput;
-    
-    this.httpService.testGet().subscribe(val => {
-      console.log("it works!")
+    console.log('start');
+    this.httpService.initGetSensor().subscribe(async val => {
       console.log(val)
-    });
+      await this.websocketClient.addSignal('force')
+      this.gaugeVal = this.websocketClient.getSignals().get('force')!
+    })
   }
 
-  Stop(){ 
+  Stop() {
     this.showInput = !this.showInput;
 
-    this.httpService.testGet().subscribe(val => {
+    this.httpService.stopMotor().subscribe(val => {
       console.log("works")
       console.log(val)
     });
   }
-  ChangeDirection(){
+  ChangeDirection() {
     this.showInput = !this.showInput;
 
-    this.httpService.testGet().subscribe(val => {
-      console.log("works")
-      console.log(val)
-    });
+    // this.httpService.c().subscribe(val => {
+    //   console.log("works")
+    //   console.log(val)
+    // });
   }
 }

@@ -2,44 +2,36 @@ img {
     transform: scale(1);
     transition: 250ms ease-in;
 }
-.p-component *  ::ng-deep{
-    margin: auto !important;
-}
 
-/* Make menubar stretch full width with centered items */
-.menubar-center-wrapper {
-  width: 100%;
+.navbar-logo {
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #333;
+  margin-left: 1rem;
 }
-
-::ng-deep .p-menubar {
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  border-radius: 0.25rem !important;
+.navbar-logo-center {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
-
-::ng-deep .p-menubar .p-menubar-root-list {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: auto !important;
-  margin: 0 auto !important;
-}
-
-::ng-deep .p-menubar .p-menubar-start,
-::ng-deep .p-menubar .p-menubar-end {
-  flex: 1 !important;
-}
-
-::ng-deep .p-menubar .p-menubar-start {
-  justify-content: flex-start !important;
-}
-
-::ng-deep .p-menubar .p-menubar-end {
-  justify-content: flex-end !important;
-}
-
-.p-element{
-    margin: auto !important;
-    width: 100% !important;
+.navbar-center-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 48px; /* match menubar height */
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #fff;
+  pointer-events: none; /* so it doesn't block menu clicks */
+  z-index: 10;
 }
