@@ -6,7 +6,7 @@
     <button 
       pButton 
       type="button"  
-      label="Input your parameters please"
+      label="Input your parameters"
       style="font-size: larger;"
       (click)="toggleInputFields()">
     </button>
@@ -24,7 +24,7 @@
         max="120"
         (input)="validateInput($event, 'age', 0, 120)"
       />
-      <p *ngIf="age !== null">You entered: {{ age }} years</p>
+      <p *ngIf="age !== null">Your age is: {{ age }} years</p>
     </div>
   
     
@@ -38,7 +38,7 @@
         style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
         (input)="validateInput($event, 'height', 0, 350)"
       />
-      <p *ngIf="height !== null">You entered: {{ height }} cm</p>
+      <p *ngIf="height !== null">Your height is: {{ height }} cm</p>
     </div>
   
     
@@ -52,7 +52,7 @@
         style="width: 200px; height: 40px; font-size: 16px; padding: 5px; text-align: center;"
         (input)="validateInput($event, 'weight', 0, 350)"
       />
-      <p *ngIf="weight !== null">You entered: {{ weight }} kg</p>
+      <p *ngIf="weight !== null">Your weight is: {{ weight }} kg</p>
     </div>
   </div>
   
