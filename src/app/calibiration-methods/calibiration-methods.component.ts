@@ -42,9 +42,9 @@ export class CalibirationMethodsComponent {
   ChangeDirection() {
     this.showInput = !this.showInput;
 
-    // this.httpService.c().subscribe(val => {
-    //   console.log("works")
-    //   console.log(val)
-    // });
+    this.httpService.flipMotor().subscribe(val => {
+      console.log("works")
+      console.log(val)
+    });
   }
 }

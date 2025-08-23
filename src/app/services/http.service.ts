@@ -27,6 +27,10 @@ export class HttpService {
     return this.httpClient.post(window.location.protocol + '//' + window.location.hostname + ':3000/stop/motor',{})
 
   }
+  flipMotor(){
+    return this.httpClient.post(window.location.protocol + '//' + window.location.hostname + ':3000/flip/motor',{})
+
+  }
   tareScale(){
     return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/tare/force')
   }
