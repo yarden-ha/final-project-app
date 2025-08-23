@@ -24,7 +24,7 @@ export class HttpService {
 
   }
   stopMotor(){
-    return this.httpClient.get(window.location.protocol + '//' + window.location.hostname + ':3000/stop/motor')
+    return this.httpClient.post(window.location.protocol + '//' + window.location.hostname + ':3000/stop/motor',{})
 
   }
   tareScale(){
