@@ -24,7 +24,8 @@
         <button pButton type="button" label="Change Direction" style="font-size: larger;" (click)="ChangeDirection()">
         </button>
 </div>
-<div>
+<div style="display: flex;">
+       
         <app-guage [value]="gaugeVal()"></app-guage>
         <app-guage [value]="'0'" [label]="'RPM'"></app-guage>
 </div>
