@@ -45,7 +45,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 This project is an HTTP server designed to interface with an Arduino-based device, enabling remote operation and monitoring of various hardware components. The server receives requests from the Arduino to control and gather data from:
 
 - **Force Sensor**: Connected via the HX711 load cell amplifier, used to measure force. Calibration methods are implemented to ensure accurate readings.
-- **Motion Sensor**: Monitors movement and provides real-time feedback. Calibration methods are also applied for precise motion detection.
+- **Sensor's Data Page**: Provides real-time control and feedback for the device, including the following functions:
+  - **Start**: Begins data acquisition or device operation.
+  - **Stop**: Halts the current operation or data acquisition.
+  - **Change Direction**: Reverses the direction of the actuator or motor.
 - **Driver**: Controls actuators or motors as required by the device.
 - **Arduino**: Acts as the central controller, communicating with the server and other hardware components.
 
@@ -63,15 +66,13 @@ calibrated_value = (raw_value - offset) / scale
 - `offset`: The zero-point offset determined during calibration
 - `scale`: The scaling factor calculated using known weights
 
-### Motion Sensor Calibration
-Motion sensor readings are calibrated to ensure accurate detection of movement. The calibration typically involves:
+### Sensor's Data Page Functions
+The Sensor's Data page replaces the previous encoder/motion sensor calibration section. It provides direct control over the device's operation through three main functions:
+- **Start**: Initiates the device's operation or data collection.
+- **Stop**: Stops the device's operation or data collection.
+- **Change Direction**: Changes the direction of the device's actuator or motor.
 
-```
-calibrated_motion = (raw_motion - baseline) / sensitivity
-```
-- `raw_motion`: The raw value from the motion sensor
-- `baseline`: The baseline value determined during calibration (e.g., when no motion is present)
-- `sensitivity`: The factor that adjusts the sensor's responsiveness
+These controls allow for real-time interaction and monitoring, ensuring the device operates as intended and can be easily managed during use.
 
 ### Device Communication
 The server provides an HTTP API to control the Arduino, communicating with it via the Firmata protocol and the Johnny-Five library. This setup allows the server to send commands and receive sensor data seamlessly
